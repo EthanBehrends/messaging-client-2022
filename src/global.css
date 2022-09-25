@@ -1,0 +1,15 @@
+input[type=text], input[type=password] {
+    @apply outline-gray-400 p-0 text-sm rounded w-full shadow-sm focus:outline-primary;
+    transition: .2s;
+}
+
+a:not([blank]) {
+    text-decoration: underline;
+    color: var(--color-primary);
+    opacity: 1;
+    transition: .1s;
+}
+
+a:hover {
+    opacity: .75;
+}
