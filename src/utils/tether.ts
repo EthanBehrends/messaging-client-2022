@@ -1,17 +1,24 @@
 import Tether from "tether"
+import { tick } from "svelte"
 
 export default function tether(element: HTMLElement, tetherOptions: any) {
   tetherOptions.element = element
 
-  let tether = new Tether(tetherOptions)
+  let tether
 
   function update(options: any) {
     options.element = element
 
-    console.log({options})
-
-    tether.setOptions(options)
+    if (!tether) {
+      tether = new Tether(options)
+    } else {
+      tether.setOptions(options)
+    }
+    
+    tick().then(() => tether.position())
   }
+
+  update(tetherOptions)
 
   function destroy() {
     tether.destroy()

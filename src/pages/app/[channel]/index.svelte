@@ -5,9 +5,7 @@
     import { channels } from "@core/messaging"
 
     $: channelId = $params.channel
-    $: _channelsStore = channels.store
-    $: _channel = $_channelsStore.find(c => get(c)._id == channelId)
 </script>
 
-<ChatContainer channel={$_channel} />
+<ChatContainer channel={{_id: channelId}} />
 

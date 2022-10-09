@@ -5,6 +5,11 @@ import "./core/wsock"
 window.formatValue = formatValue
 window.identity = val => val
 
+import dayjs from "dayjs"
+import relativeTime from "dayjs/plugin/relativeTime"
+
+dayjs.extend(relativeTime)
+window.dayjs = dayjs
 
 
 

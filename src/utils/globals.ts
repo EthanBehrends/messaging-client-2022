@@ -10,15 +10,15 @@ export const PowerAnimation = (
     let start: number
     let done = false
 
-    let durationInit: number|string = options.duration
+    let durationInit: number|string|undefined = options.duration
     let duration: number
 
-    if (durationInit) {
+    if (durationInit !== undefined) {
         if (typeof durationInit === "string") {
             duration = parseInt(durationInit) * (({
                 "s": 1000,
                 "ms": 1
-            })[durationInit.match(/m?s/)[0]] ?? 1)
+            })[durationInit?.match(/m?s/)[0]] ?? 1)
         } else {
             duration = durationInit
         }

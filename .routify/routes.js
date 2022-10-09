@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Sun Sep 18 2022 20:07:07 GMT-0500 (Central Daylight Time)
+ * File generated Sat Oct 08 2022 18:01:13 GMT-0500 (Central Daylight Time)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2022-09-19T01:07:07.987Z"
+export const __timestamp = "2022-10-08T23:01:13.686Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -201,6 +201,31 @@ export const _tree = {
       "path": "/auth",
       "id": "_auth__layout",
       "component": () => import('../src/pages/auth/_layout.svelte').then(m => m.default)
+    },
+    {
+      "isFile": true,
+      "isDir": false,
+      "file": "index.svelte",
+      "filepath": "/index.svelte",
+      "name": "index",
+      "ext": "svelte",
+      "badExt": false,
+      "absolutePath": "/Users/ethan/Files/messaging/client/src/pages/index.svelte",
+      "importPath": "../src/pages/index.svelte",
+      "isLayout": false,
+      "isReset": false,
+      "isIndex": true,
+      "isFallback": false,
+      "isPage": true,
+      "ownMeta": {},
+      "meta": {
+        "recursive": true,
+        "preload": false,
+        "prerender": true
+      },
+      "path": "/index",
+      "id": "_index",
+      "component": () => import('../src/pages/index.svelte').then(m => m.default)
     }
   ],
   "isLayout": true,

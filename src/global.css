@@ -1,5 +1,5 @@
 input[type=text], input[type=password] {
-    @apply outline-gray-400 p-0 text-sm rounded w-full shadow-sm focus:outline-primary;
+    @apply outline-gray-400 text-sm rounded w-full shadow-sm focus:outline-primary;
     transition: .2s;
 }
 
@@ -10,6 +10,17 @@ a:not([blank]) {
     transition: .1s;
 }
 
-a:hover {
+a:hover:not([blank]) {
     opacity: .75;
+}
+
+textarea {
+    transition: outline 100ms;
+}
+
+textarea:focus {
+    outline-color: var(--color-primary);
+    outline-offset: 2px;
+    outline-style: solid;
+    outline-width: 2px;
 }
